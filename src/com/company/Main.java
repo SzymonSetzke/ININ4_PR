@@ -1,5 +1,9 @@
 package com.company;
 
+import com.company.creatures.Animal;
+import com.company.creatures.Human;
+import com.company.devices.Car;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -21,25 +25,21 @@ public class Main {
         me.pet.feed();
         me.pet.feed();
 
-//        me.pet.takeForAWalk();
-//        me.pet.takeForAWalk();
-//        me.pet.takeForAWalk();
-//        me4.pet.takeForAWalk();
-//        me.pet.takeForAWalk();
-//        me.pet.takeForAWalk();
-//        me.pet.takeForAWalk();
-//        me.pet.takeForAWalk();
-//        me.pet.takeForAWalk();
-//        me.pet.takeForAWalk();
-//        me.pet.takeForAWalk();
-//        me.pet.44444();
-//        me.pet.takeFor444AWalk();
-       // for (int i = 0; )
-       // do{
-        //    me.pet.takeForAWalk();
-       // }while (me.pet.imDead());
-//sebek to ...
-        me.car = new Car("Volkswagen","Passat",1984,1.9,"Red");
+        me.setSalary(2000.0);
+        Car passat = new Car("Volkswagen", "Passat", 1984, 1.9, "Red");
+        me.setCar(passat);
+        System.out.println("I'm driving " + me.getCar().model);
+
+        Human myWife = new Human();
+        myWife.firstName = "Karolina";
+        myWife.lastName = "Warda";
+        myWife.setSalary(32000.0);
+        myWife.setCar(passat);
+
+        System.out.println(me.getCar());
+        System.out.println(myWife.getCar());
+
+        System.out.println(me);
 
     }
 }
