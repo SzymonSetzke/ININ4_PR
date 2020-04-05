@@ -1,48 +1,65 @@
 package com.company;
 
-import com.company.creatures.Animal;
-import com.company.creatures.Human;
+import com.company.creaturs.Animal;
+import com.company.creaturs.Human;
 import com.company.devices.Car;
-import com.company.devices.Phone;
 
 public class Main {
 
     public static void main(String[] args) {
-
-        Human me = new Human();
-        me.firstName = "Jacek";
-        me.lastName = "Placek";
-        me.pet = new Animal("mouse");
-        me.pet.name = "Myszojeleń";
-//        me.pet.feed();
-
-        System.out.println(me.pet.name);
-
         Animal dog = new Animal("dog");
         dog.name = "Akita";
-        me.pet = dog;
+//
+//		dog.feed();
+//		dog.takeForWalk();
+//		dog.takeForWalk();
+//		dog.takeForWalk();
+//		dog.takeForWalk();
+//		dog.takeForWalk();
+//		dog.takeForWalk();
+//		dog.takeForWalk();
+//		dog.takeForWalk();
+//		dog.takeForWalk();
+//		dog.takeForWalk();
+//		dog.takeForWalk();
+//		dog.takeForWalk();
+//		dog.takeForWalk();
+//		dog.feed();
 
-//        me.pet.feed();
-//        me.pet.feed();
-//        me.pet.feed();
+        Human me = new Human();
+        me.firstName = "Marcin";
+        me.lastName = "Nowak";
+        me.pet = new Animal("mouse");
+        me.pet.name = "Myszojeleń";
+        me.pet.feed();
 
-        me.setSalary(2000.0);
-        Car passat = new Car("Volkswagen", "Passat", 1984, 1.9, "Red");
-        me.setCar(passat);
-        System.out.println("I'm driving " + me.getCar().model);
+        Car audi =new Car("Audi", "A3", 2006, 3);
+        audi.cost = 20000;
+        me.setCar(audi);
+        audi.owner = me;
 
-        Human myWife = new Human();
-        myWife.firstName = "Karolina";
-        myWife.lastName = "Warda";
-        myWife.setSalary(32000.0);
-        myWife.setCar(passat);
+        Human wife = new Human();
+        wife.firstName = "Ania";
+        wife.lastName = "Nowak";
+        wife.setCar(audi);
 
-        System.out.println(me.getCar());
-        System.out.println(myWife.getCar());
 
-        System.out.println(me);
-        System.out.println(me.species);
-        me.feed();
+//		System.out.println(dog.name);
+//		System.out.println(me.pet.name);
 
+        System.out.println("my salary is: " + me.getSalary());
+
+        System.out.println("sprawdzanie klas");
+        System.out.println(me instanceof Human);
+        System.out.println(me instanceof Animal);
+
+        System.out.println("sprawdzanie klas");
+        System.out.println(dog instanceof Human);
+        System.out.println(dog instanceof Animal);
+
+
+        me.sale();
+        audi.sale();
+        dog.sale();
     }
 }
