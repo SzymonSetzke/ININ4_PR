@@ -1,31 +1,20 @@
 package com.company.devices;
 
-import com.company.creaturs.Human;
+public class Car extends Device {
+    final public Double engineCapacity;
+    final public String colour;
 
-public class Car extends Device{
-    //    private final String model;
-    private final int numberOfDoors;
-    //    public int cost;
-//    public Human owner;
-    public Car(String mark, String model, Integer yearOfProduction, int numberOfDoors) {
+    public Car(String mark, String model, Integer yearOfProduction, Double engineCapacity, String colour) {
         super(mark, model, yearOfProduction);
+        this.engineCapacity = engineCapacity;
+        this.colour = colour;
 
-        this.numberOfDoors = numberOfDoors;
-
+        this.value = 20000.0;
     }
 
-    public String getModel() {
-        return this.model;
+    @Override
+    void turnOn() {
+        System.out.println("engine is on");
     }
 
-    public String toString() {
-        return model + " " + cost;
-    }
-//    public void setOwner(Human owner) {
-//        this.owner = owner;
-//    }
-//
-//    public  Human getOwner() {
-//        return owner;
-//    }
 }

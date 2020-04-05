@@ -1,5 +1,5 @@
 package com.company;
 
-public interface Seleable {
-    void sale();
+public interface Saleable {
+    void sell() throws Exception;
 }
