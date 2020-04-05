@@ -5,7 +5,7 @@ import java.sql.SQLOutput;
 
 public class Animal {
     public final String species;
-    private Double weight;
+    protected Double weight;
     public String name;
     File pic;
 
@@ -58,7 +58,7 @@ public class Animal {
         }
 
     }
-// a
+
     public String toString() {
         return this.species + " " + this.name;
     }
